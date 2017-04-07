@@ -1,0 +1,700 @@
+{
+	"@platforms": ["android", "iPhone", "iPad"],
+	"id": "H5DEF9358",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "车行天下",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.1.2",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+		"Accelerometer": {
+            "description": "访问加速度感应器"
+        },
+        "Audio": {
+            "description": "访问麦克风"
+        },
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Camera": {
+            "description": "访问摄像头"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Device": {
+            "description": "访问设备信息"
+        },
+        "Downloader": {
+            "description": "文件下载管理"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "File": {
+            "description": "访问本地文件系统"
+        },
+        "Gallery": {
+            "description": "访问系统相册"
+        },
+        "Geolocation": {
+            "description": "访问位置信息"
+        },
+         "Invocation": {
+            "description": "使用Native.js能力"
+        },
+        
+        "Orientation": {
+            "description": "访问方向感应器"
+        },
+        "Proximity": {
+            "description": "访问距离感应器"
+        },
+        "Storage": {
+            "description": "管理应用本地数据"
+        },
+        
+        "Uploader": {
+            "description": "管理文件上传任务"
+        },
+        "Runtime": {
+            "description": "访问运行期环境"
+        },
+        "XMLHttpRequest": {
+            "description": "跨域网络访问"
+        },
+        "Zip": {
+            "description": "文件压缩与解压缩"
+        },
+        "Barcode": {
+            "description": "管理二维码扫描插件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "Speech": {
+            "description": "管理语音识别插件"
+        },
+        "Webview":{
+        	"description": "窗口管理"
+        },
+        "NativeUI":{
+        	"description": "原生UI控件"
+        },
+        "Navigator":{
+        	"description": "浏览器信息"
+        },
+        "NativeObj":{
+        	"description": "原生对象"
+        },"Payment":{}
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true,"delay":"0"
+		},
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {"plugins":{"payment":{"alipay":{"description":"阿里支付","scheme":""},"weixin":{"description":"微信支付","appid":"wxd678efh567hg6787"}}},
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+			},
+			"orientation": ["portrait-primary","portrait-secondary","landscape-primary","landscape-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "unpackage/res/icons/120x120.png",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png","retina8":"unpackage/res/icons/180x180.png","settings-retina8":"unpackage/res/icons/87x87.png"
+					},
+					"ipad": {
+						"normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "unpackage/res/icons/76x76.png", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "unpackage/res/icons/152x152.png", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "unpackage/res/icons/40x40.png",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png"
+					}
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": ""
+					},
+					"ipad": {
+						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": ""
+					}
+				},
+				"android": {
+					 /*普通屏启动图片，分辨率：240x282*/
+					 /*大屏启动图片，分辨率：320x442*/
+					 /*高分屏启动图片，分辨率：480x762*/
+					 /*720P高分屏启动图片，分辨率：720x1242*/
+					
+				}
+			}
+		}
+	},
+	"dependencies":{
+		"pages": {
+			"discount.html": {
+				"href": "discount.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"img/111.jpg",
+					"img/22.jpg",
+					"img/33.jpg",
+					"img/66.jpg",
+					"img/55.jpg",
+					"img/44.jpg",
+					"img/77.jpg"
+				],
+				"priority": 0
+			},
+			"nearby.html": {
+				"href": "nearby.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"index.html"
+				],
+				"priority": 1,
+				"refer": []
+			},
+			"Car/setting.html": {
+				"href": "Car/setting.html",
+				"resources": [
+					"Car/js/mui.min.js",
+					"Car/js/mui.view.js",
+					"Car/js/feedback.js",
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/css/feedback.css"
+				],
+				"priority": 2
+			},
+			"Car/exchange.html": {
+				"href": "Car/exchange.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/js/mui.min.js"
+				],
+				"priority": 3
+			},
+			"Car/exchange_2.html": {
+				"href": "Car/exchange_2.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/js/mui.min.js"
+				],
+				"priority": 4
+			},
+			"Car/integral.html": {
+				"href": "Car/integral.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/js/mui.min.js",
+					"Car/img/statement.png",
+					"Car/integral rule.html",
+					"Car/img/20 yuan.png",
+					"Car/img/10 yuan.PNG"
+				],
+				"refer": [
+					"Car/exchange.html",
+					"Car/exchange_2.html"
+				],
+				"priority": 3
+			},
+			"Car/coupon.html": {
+				"href": "Car/coupon.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/js/mui.min.js",
+					"Car/index.html",
+					"Car/img/100 yuan.png"
+				],
+				"priority": 4,
+				"refer": []
+			},
+			"Car/fenxiang.html": {
+				"href": "Car/fenxiang.html",
+				"resources": [
+					"Car/css/style.css",
+					"Car/js/jquery.js",
+					"Car/img/gbRes_6.png",
+					"Car/img/gbRes_4.png",
+					"Car/img/gbRes_5.png",
+					"Car/img/gbRes_2.png",
+					"Car/img/gbRes_3.png",
+					"Car/img/gbRes_1.png"
+				],
+				"priority": 5
+			},
+			"Car/yanzheng_card2.html": {
+				"href": "Car/yanzheng_card2.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/css/app.css",
+					"Car/css/mui.picker.css",
+					"Car/css/mui.poppicker.css",
+					"Car/js/mui.min.js",
+					"Car/js/mui.picker.js",
+					"Car/js/mui.poppicker.js",
+					"Car/js/city.data.js",
+					"Car/js/city.data-3.js",
+					"Car/yanzheng_card.html"
+				],
+				"priority": 6,
+				"refer": []
+			},
+			"Car/yanzheng_card.html": {
+				"href": "Car/yanzheng_card.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/css/app.css",
+					"Car/css/mui.picker.css",
+					"Car/css/mui.poppicker.css",
+					"Car/js/mui.min.js",
+					"Car/js/mui.picker.js",
+					"Car/js/mui.poppicker.js",
+					"Car/js/city.data.js",
+					"Car/js/city.data-3.js",
+					"Car/index.html",
+					"Car/yanzheng_card2.html"
+				],
+				"refer": [],
+				"priority": 6
+			},
+			"Car/index.html": {
+				"href": "Car/index.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/css/app.css",
+					"Car/js/mui.min.js",
+					"Car/img/photo.png",
+					"Car/img/red.png",
+					"Car/img/common.png",
+					"Car/img/share.png",
+					"Car/img/credit.png",
+					"Car/img/self_driving.png",
+					"Car/img/free_ride.png",
+					"Car/img/invoice.png",
+					"Car/coupon.html",
+					"Car/integral.html",
+					"Car/yanzheng_card.html",
+					"Car/login.html",
+					"Car/my trip.html",
+					"Car/my invoice.html"
+				],
+				"refer": [
+					"Car/setting.html",
+					"Car/fenxiang.html"
+				],
+				"priority": 2
+			},
+			"Car/reg.html": {
+				"href": "Car/reg.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/js/mui.min.js",
+					"Car/img/duihao.png"
+				],
+				"priority": 3
+			},
+			"Car/login.html": {
+				"href": "Car/login.html",
+				"resources": [
+					"Car/js/mui.min.js",
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/index.html"
+				],
+				"refer": [
+					"Car/reg.html"
+				],
+				"priority": 2
+			},
+			"Car/footprint.html": {
+				"href": "Car/footprint.html",
+				"resources": [
+					"Car/css/mui.min.css",
+					"Car/fonts/mui.ttf",
+					"Car/css/app.css",
+					"Car/js/mui.min.js",
+					"Car/img/end.png"
+				],
+				"priority": 3
+			},
+			"models_list.html": {
+				"href": "models_list.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/jquery.mobile-1.4.5.min.css",
+					"js/jquery.mobile-1.4.5.min.js",
+					"img/a.png",
+					"img/aaa.png",
+					"img/b.png",
+					"img/bbb.png",
+					"img/c.png",
+					"img/ccc.png",
+					"img/d.png"
+				],
+				"priority": 4
+			},
+			"Appointment_delivery.html": {
+				"href": "Appointment_delivery.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/mui.picker.min.js",
+					"js/mui.picker.js",
+					"js/mui.poppicker.js",
+					"js/city.data.js",
+					"js/city.data-3.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"Car/css/app.css",
+					"Car/css/mui.picker.min.css",
+					"Car/css/mui.poppicker.css",
+					"img/bc4.jpg",
+					"img/dian1.png",
+					"img/dian2.png",
+					"list_test.html",
+					"index.html"
+				],
+				"refer": [
+					"Car/footprint.html",
+					"models_list.html"
+				],
+				"priority": 3
+			},
+			"take_it.html": {
+				"href": "take_it.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"css/mui.picker.css",
+					"css/mui.poppicker.css",
+					"js/mui.min.js",
+					"js/mui.picker.js",
+					"js/mui.poppicker.js",
+					"js/city.data.js",
+					"js/city.data-3.js",
+					"img/dian1.png",
+					"img/dian2.png",
+					"img/1（1）.jpg",
+					"img/2（2）.jpg",
+					"list_test.html",
+					"img/1(1).jpg",
+					"img/2(2).jpg",
+					"index.html"
+				],
+				"refer": [
+					"models_list.html"
+				],
+				"priority": 4
+			},
+			"tejia_Package.html": {
+				"href": "tejia_Package.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"css/mui.picker.min.css",
+					"css/mui.poppicker.css",
+					"js/mui.min.js",
+					"img/bc4.jpg",
+					"js/mui.picker.min.js",
+					"js/mui.poppicker.js",
+					"js/city.data.js",
+					"js/city.data-3.js",
+					"youhui_huodong.html",
+					"index.html"
+				],
+				"refer": [
+					"models_list.html"
+				],
+				"priority": 5
+			},
+			"shunfeng_car.html": {
+				"href": "shunfeng_car.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"img/3(3).jpg",
+					"img/4.jpg",
+					"img/5.jpg",
+					"img/6.jpg",
+					"img/7.jpg",
+					"img/8.jpg",
+					"index.html"
+				],
+				"priority": 6,
+				"refer": []
+			},
+			"map.html": {
+				"href": "map.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"index.html"
+				],
+				"priority": 7,
+				"refer": []
+			},
+			"daohang.html": {
+				"href": "daohang.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"index.html"
+				],
+				"priority": 8,
+				"refer": []
+			},
+			"index.html": {
+				"href": "index.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"js/jquery.min.js",
+					"img/bc4.jpg",
+					"img/car(1).png",
+					"img/huanche.png",
+					"img/tejiache.png",
+					"img/feng.png",
+					"img/99999.png",
+					"img/daohang(1).png",
+					"img/timg.jpg",
+					"img/timg2.jpg",
+					"img/timg3.jpg",
+					"img/BC0.jpg",
+					"Appointment_delivery.html",
+					"take_it.html",
+					"tejia_Package.html",
+					"map.html",
+					"shunfeng_car.html",
+					"daohang.html",
+					"nearby.html",
+					"Car/login.html"
+				],
+				"refer": [
+					"discount.html"
+				],
+				"priority": 0
+			},
+			"dindan.html": {
+				"resources": [
+					"pay.html",
+					"css/app.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"list_test.html": {
+				"resources": [
+					"img/c.png",
+					"css/jquery.mobile-1.4.5.min.css",
+					"img/aaa.png",
+					"js/jquery.mobile-1.4.5.min.js",
+					"jquery.min.js",
+					"img/b.png",
+					"img/d.png",
+					"img/bbb.png",
+					"img/ccc.png",
+					"img/a.png",
+					"Appointment_delivery.html",
+					"take_it.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pay.html": {
+				"resources": [
+					"dindan.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"youhui_huodong.html": {
+				"resources": [
+					"tejia_Package.html",
+					"img/car-background.png"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"Car/address management.html",
+				"Car/img/car-background.png",
+				"img/car_rand.png",
+				"Car/value card.html",
+				"Car/img/about us.png",
+				"Car/img/Head portrait.png",
+				"img/car_find.png",
+				"Car/unpackage/release/H5B23C543_1212225637.apk",
+				"Car/img/paid.png",
+				"Car/unpackage/release/H5B23C543_1212222655.apk",
+				"Car/img/san dian.png",
+				"Car/css/mui.css",
+				"Car/img/opinion.png",
+				"img/88.jpg",
+				"Car/img/help.png",
+				"Car/js/mui.js",
+				"Car/img/bodyBg3.jpg",
+				"Car/unpackage/release/H5B23C543_1209091901.apk",
+				"Car/img/invoice.jpg",
+				"Car/img/feedback.png",
+				"Car/img/bodyBg2.jpg",
+				"Car/js/jquery.mobile-1.4.5.min.js",
+				"js/mui.js",
+				"Car/img/star.png",
+				"Car/add address.html",
+				"Car/img/point.png",
+				"Car/manifest.json",
+				"Car/img/setting.png",
+				"css/mui.css",
+				"Car/img/starting point.png",
+				"Car/img/zhong_dian.png",
+				"img/2.jpg",
+				"img/11.png",
+				"img/Sports car.jpg",
+				"img/1.jpg",
+				"Car/img/voucher.png",
+				"Car/js/jquery.min.js",
+				"Car/img/bodyBg.jpg",
+				"Car/img/qi_dian.png",
+				"img/3.jpg",
+				"Car/css/jquery.mobile-1.4.5.min.css",
+				"Car/package discount.html",
+				"Car/view invoice.html"
+			]
+		}
+	},"fullscreen":false,
+	"unpackage":[
+	  "Car/add address.html",
+	  "Car/address management.html",
+	  "Car/css/jquery.mobile-1.4.5.min.css",
+	  "Car/css/mui.css",
+	  "Car/img/10 yuan.PNG",
+	  "Car/img/100 yuan.png",
+	  "Car/img/20 yuan.png",
+	  "Car/img/Head portrait.png",
+	  "Car/img/about us.png",
+	  "Car/img/bodyBg.jpg",
+	  "Car/img/bodyBg2.jpg",
+	  "Car/img/bodyBg3.jpg",
+	  "Car/img/car-background.png",
+	  "Car/img/feedback.png",
+	  "Car/img/help.png",
+	  "Car/img/invoice.jpg",
+	  "Car/img/opinion.png",
+	  "Car/img/paid.png",
+	  "Car/img/point.png",
+	  "Car/img/qi_dian.png",
+	  "Car/img/san dian.png",
+	  "Car/img/setting.png",
+	  "Car/img/star.png",
+	  "Car/img/starting point.png",
+	  "Car/img/voucher.png",
+	  "Car/img/zhong_dian.png",
+	  "Car/integral rule.html",
+	  "Car/js/jquery.min.js",
+	  "Car/js/jquery.mobile-1.4.5.min.js",
+	  "Car/js/mui.js",
+	  "Car/manifest.json",
+	  "Car/my invoice.html",
+	  "Car/my trip.html",
+	  "Car/package discount.html",
+	  "Car/unpackage/release/H5B23C543_1209091901.apk",
+	  "Car/unpackage/release/H5B23C543_1212222655.apk",
+	  "Car/unpackage/release/H5B23C543_1212225637.apk",
+	  "Car/value card.html",
+	  "Car/view invoice.html",
+	  "css/mui.css",
+	  "img/1.jpg",
+	  "img/11.png",
+	  "img/2.jpg",
+	  "img/3.jpg",
+	  "img/88.jpg",
+	  "img/Sports car.jpg",
+	  "img/car_find.png",
+	  "img/car_rand.png",
+	  "js/mui.js"
+	]
+}

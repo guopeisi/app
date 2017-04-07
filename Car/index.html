@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/app.css" />
+		<style type="text/css">
+			#card_margin{margin-bottom: 20px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-bar mui-bar-nav" style="height: 100px; background:darkslategray;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title"><font style="color: white;">我的</font></h1>
+		    <center><a href="setting.html"><img src="img/photo.png" style="margin-top:40px;margin-left: -19px;" /></a></center>
+		</div><br />
+		<div class="mui-content" style="margin-top: 60px;">
+    
+</div>
+		<div class="mui-content">
+		   
+        <ul class="mui-table-view mui-grid-view mui-grid-9">
+       
+        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            <a href="integral.html">
+                <div class="mui-media-body">0分</div>
+                <div class="mui-media-body">积分</div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            <a href="coupon.html">
+            	<img src="img/red.png" style="position: absolute;right: -10px;" />
+            	<div class="mui-media-body">1张</div>
+                <div class="mui-media-body">优惠券</div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            <a href="value card.html">
+            	<div class="mui-media-body">0元</div>
+                <div class="mui-media-body">储值卡</div>
+            </a>
+        </li>
+           </ul>
+   
+		</div>
+		<div data-role='main' class="mui-content" style="margin-top: 0px;">
+			<div class="mui-card" id="card_margin">
+		       <ul class="mui-table-view">
+		           <li class="mui-table-view-cell">
+		               <a href="yanzheng_card.html" class="mui-navigate-right">
+		                  <img src="img/credit.png" /> <span id="find_title_font">验证信用卡</span>
+		               </a>
+		           </li>
+		        
+		       </ul>
+		   </div>
+		    <div class="mui-card" id="card_margin">
+		       <ul class="mui-table-view">
+		           <li class="mui-table-view-cell">
+		               <a class="mui-navigate-right" id="alert">
+		                  <img src="img/self_driving.png" /> <span id="find_title_font">自驾订单</span>
+		               </a>
+		           </li>
+		        <li class="mui-table-view-cell">
+		               <a href="my trip.html" class="mui-navigate-right">
+		                  <img src="img/free_ride.png" /> <span id="find_title_font">顺风车订单</span>
+		               </a>
+		           </li>
+		       </ul>
+		   </div>
+		   <div class="mui-card" id="card_margin">
+		       <ul class="mui-table-view">
+		           <li class="mui-table-view-cell">
+		               <a class="mui-navigate-right" href="my invoice.html">
+		                  <img src="img/invoice.png" />
+		                  <span id="find_title_font">我的发票</span>
+		               </a>
+		           </li>
+		       </ul>
+		   </div>
+		</div>
+		<div class="mui-card" id="card_margin">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="address management.html">
+						<img src="img/common.png" />
+						<span id="find_title_font">常用地址</span>
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+		 </div> 
+		<div class="mui-card" id="card_margin">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="fenxiang.html">
+						<img src="img/share.png" />
+						<span id="find_title_font">分享</span>
+					</a>
+				</li>
+			</ul>
+		</div>  
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var info = document.getElementById("info");
+			document.getElementById("alert").addEventListener('tap', function() {
+				mui.alert('您的自驾订单为空', '自驾订单', function() {
+//					info.innerText = '你刚关闭了警告框';
+				});
+			});
+			
+		</script>
+	</body>
+
+</html>

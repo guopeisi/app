@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<style>
+			.mui-table h4,.mui-table h5,.mui-table .mui-h5,.mui-table .mui-h6,.mui-table p{
+		        margin-top: 0;
+		    }
+		    .mui-table h4{
+		        line-height: 21px;
+		        font-weight: 500;
+		    }
+		
+		    .mui-table .oa-icon{
+		        position: absolute;
+		        right:0;
+		        bottom: 0;
+		    }
+		    .mui-table .oa-icon-star-filled{
+		        color:#f14e41;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title" style="color: darkgoldenrod;">订单详情</h1>
+		</div>
+		<div class="mui-content" style="margin-top: 0px;">
+		    <ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h5 class="mui-ellipsis">订单号 <font style="float: right;">10086</font></h5>
+		                    <hr align="center" color="gainsboro" size="1" width="100%" />
+		                    <h5>订单信息</h5>
+		                    <h5>配送日期：2016-12-20，15：00-19：00</h5>
+		                    <h5>送取日期：2016-12-22，15：00-19：00</h5>
+		                    <h5>送取方式<font style="float: right;">送车上门</font></h5>
+		                    <h5>订单内容：送车至---天津工业大学</h5>
+		                    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;还车至---天津农学院</h5>
+		                    
+		                    <h5>车辆信息：丰田致炫   两厢1.3自动乘坐5人   车牌：津B1001</h5>
+		                    <hr align="center" width="100%" size="1" color="gainsboro" />
+		                    <h5>应支付价格：11元</h5>
+		                    <button class="ui-btn mui-btn-block ui-btn-corner-all ui-shadow" style="background:red ;" onclick="window.location='pay.html'"><font style="color: white;">去支付</font></button>
+		                </div>
+		            </div>
+		        </li>
+		    </ul>
+		</div>
+	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
+</html>

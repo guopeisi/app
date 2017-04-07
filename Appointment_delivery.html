@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>预约送取</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css?v=1.0" />
+    <script src="http://webapi.amap.com/maps?v=1.3&key=9e2ef0ef5c79192833b3187ee123217d"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=9HxPVLoAYKcLItcBpFeBsqcYFQsWIfyz"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="Car/css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="Car/css/mui.picker.min.css"/>
+	<link rel="stylesheet" type="text/css" href="Car/css/mui.poppicker.css"/>
+    <script type="text/javascript" charset="UTF-8">
+      
+    </script>
+    <style type="text/css">
+    	marquee{
+    		color: white;
+    		font-family: "楷体";
+    		font-weight: 600;
+    	}
+    	.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
+		#demo7{
+			width: 40%;
+			
+			
+		}	
+		#showCityPicker{
+			width: 70%;
+			margin-left:-8px ;
+			font-size: 14px;
+		}
+		#showCityPicker2{
+			width: 100%;
+			margin-left:-8px ;
+			font-size: 14px;
+		}
+		
+    	.mui-content{
+    		margin-top:-3px;
+    	}
+    	.mui-content-padded img{
+    		margin-top: 13px;
+    		margin-left: -5px;
+    		margin-right: 7px;
+    	}
+    	.shadow{
+    		box-shadow:0px 1px 10px #555555;
+    		
+    	}
+    	.mui-bar{
+    		
+    		/*background-image: url(img/bc4.jpg); */
+    		background-size:500px;
+    		background-repeat: no-repeat;
+    	}
+    </style>
+</head>
+<body>
+	
+	    <div class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title" style="color: darkgoldenrod;">预约送取</h1>
+	    <!--<a href="Car/footprint.html" class=" mui-icon mui-icon-paperclip mui-icon-right-nav mui-pull-right"></a>
+	    <a href="youhui_huodong.html" class="mui-icon mui-icon-info mui-icon-right-nav mui-pull-right"></a>-->
+	   
+	</div>
+	<div class="mui-content" style="margin-top: 60px;">
+	  <marquee id="affiche" align="absmiddle" behavior="scroll" bgcolor="orange" direction="left" height="25px" width="100%" hspace="0" vspace="3" loop="-1" scrollamount="4" scrolldelay="100">
+温馨提示：请提前4个工作小时预约上门送取车
+</marquee>
+                <div class="mui-row">  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian1.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid limegreen; position: absolute;top: 28px; ">取车城市</p>
+		        </div>  
+		        <div class="mui-col-xs-7" >
+		        	<ul class="mui-table-view">
+					    <li class="mui-table-view-cell" >
+					    	<a id='showCityPicker3'>城市</a>
+					    </li>
+					</ul>					
+		        </div>  
+		        <div class="mui-col-xs-2" >
+		        	<div class="mui-switch mui-switch-mini" style="margin:4px auto;">
+					  <div class="mui-switch-handle"></div>
+					</div>
+		        </div>
+		    </div>  
+		    <div class="mui-row" >  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian2.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid yellow; position: absolute;top: 28px; ">取车门店</p>
+		        </div>  
+		        <div class="mui-col-xs-9" >
+		        	<div style="width:100%; height:43px; line-height:100%; text-align:center;">
+					    <select id="select1">
+					    <option value="1">一号店</option>
+					    <option value="2">二号店</option>
+					    <option value="3">三号店</option>
+					    <option value="4">四号店</option>
+					    </select>
+					</div>
+		        	<!--<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					        <a class="mui-navigate-right" style="color:#666;font-size: 12px;">选择门店</a>
+					    </li>
+					</ul>-->
+		        </div>  
+		    </div>
+		    
+		     <div class="mui-row" style="margin-top:10px;">  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian1.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid limegreen; position: absolute;top: 28px; ">还车城市</p>
+		        </div>  
+		        <div class="mui-col-xs-7" style="background: blue;">
+		        	<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					    	<a id='showCityPicker4'>城市</a>
+					    </li>
+					</ul>	
+		        </div>  
+		        <div class="mui-col-xs-2">
+		        	<div class="mui-switch mui-switch-mini" style="margin:4px auto;">
+					  <div class="mui-switch-handle"></div>
+					</div>
+		        </div>
+		    </div>  
+		    <div class="mui-row" >  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian2.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid yellow; position: absolute;top: 28px; ">还车门店</p>
+		        </div>  
+		        
+		        
+		        <div class="mui-col-xs-9" >
+		        	<div style="width:100%; height:43px; line-height:100%; text-align:center;">
+					    <select id="select1">
+					    <option value="1">一号店</option>
+					    <option value="2">二号店</option>
+					    <option value="3">三号店</option>
+					    <option value="4">四号店</option>
+					    </select>
+					</div>
+		        	<!--<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					        <a class="mui-navigate-right" style="color:#666;font-size: 12px;">选择门店</a>
+					    </li>
+					</ul>-->
+		        </div>  
+		    </div>
+       
+      <div class="shadow">
+      	
+      
+      	<hr />
+      <!--data  time-->
+      <button id='demo7' data-options='{"type":"hour","customData":{"h":[{"text":"上午(9:00-12:00)","value":"上午(9:00-12:00)"},{"text":"下午(14:00-18:00)","value":"下午(14:00-18:00)"},{"text":"晚上(19:00-22:00)","value":"晚上(19:00-22:00)"}]},"labels":["年", "月", "日", "时段", "分"]}' 
+					class="btn mui-btn mui-btn-green mui-btn-outlined">					
+					<label id="mday">请选择日期</label>
+					<br />
+					<label id="hours">取车</label>
+					<br />					
+				</button>
+				<button id='demo7' data-options='{"type":"hour","customData":{"h":[{"text":"上午(9:00-12:00)","value":"上午(9:00-12:00)"},{"text":"下午(14:00-18:00)","value":"下午(14:00-18:00)"},{"text":"晚上(19:00-22:00)","value":"晚上(19:00-22:00)"}]},"labels":["年", "月", "日", "时段", "分"]}' 
+					class="btn2 mui-btn mui-btn-green mui-pull-right mui-btn-outlined">
+					
+					<label id="mday1">请选择日期</label>
+					<br />
+					<label id="hours1">还车</label>
+					<br />
+				</button>
+				<hr />
+				<div style="text-align: center;">
+				
+				<a href="list_test.html" class="mui-btn mui-btn-yellow" style="width: 40%;margin-top: 5px; ">去选车</a>
+				<!--手动定位btn-->
+				<input type="text" id="suggestId" size="20" value="" style="width:40%; margin-top:5px ;" placeholder="手动定位"/>
+				<!--<input href=""  style="width: 40%;margin-top: 5px; " placeholder="手动定位"></input>-->
+				</div>
+				</div>
+				
+				<!--自动定位-->
+				<div id="mapContainer" style="position: absolute;top: 391px; margin-top: 6px; height: 240px; z-index: 3;display: none; ">
+					
+				</div>
+				<script type="text/javascript">
+                navigator.geolocation.getCurrentPosition(geo_success, geo_error);
+
+                 function geo_success(position) {
+                 var map = new AMap.Map('mapContainer', {
+        // 设置中心点
+                   center: [position.coords.longitude, position.coords.latitude],
+
+        // 设置缩放级别
+        zoom: 13
+      });
+
+      var marker = new AMap.Marker({
+        //复杂图标
+        icon: new AMap.Icon({
+            //图标大小
+            size: new AMap.Size(28, 37),
+            //大图地址
+            image: "http://webapi.amap.com/images/custom_a_j.png",
+            imageOffset: new AMap.Pixel(-28, 0)
+        }),
+        //在地图上添加点
+        position: [position.coords.longitude, position.coords.latitude]
+      });
+
+      marker.setMap(map);
+    }
+
+    function geo_error(msg) {
+      console.log(msg.code, msg.message);
+    }
+  </script>
+         
+         
+         <!--手动定位-->
+         <div id="l-map" style="height: 240px;"></div>
+	    
+	<!--<div id="searchResultPanel" style="margin-top: 6px; height: 20px; z-index: 30; "></div>-->
+	<script type="text/javascript">
+	// 百度地图API功能
+	function G(id) {
+		return document.getElementById(id);
+	}
+
+	var map = new BMap.Map("l-map");
+	map.centerAndZoom("北京",12);                   // 初始化地图,设置城市和地图级别。
+
+	var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+		{"input" : "suggestId"
+		,"location" : map
+	});
+
+	ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+	var str = "";
+		var _value = e.fromitem.value;
+		var value = "";
+		if (e.fromitem.index > -1) {
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}    
+		str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+		
+		value = "";
+		if (e.toitem.index > -1) {
+			_value = e.toitem.value;
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}    
+		str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+//		G("searchResultPanel").innerHTML = str;
+	});
+
+	var myValue;
+	ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+	var _value = e.item.value;
+		myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+//		G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+		
+		setPlace();
+	});
+
+	function setPlace(){
+		map.clearOverlays();    //清除地图上所有覆盖物
+		function myFun(){
+			var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+			map.centerAndZoom(pp, 18);
+			map.addOverlay(new BMap.Marker(pp));    //添加标注
+		}
+		var local = new BMap.LocalSearch(map, { //智能搜索
+		  onSearchComplete: myFun
+		});
+		local.search(myValue);
+	}
+</script>
+	
+	<!--自动定位和手动定位转换-->
+	
+	<script type="text/javascript" src="js/jquery.min.js" >
+		
+		$(document).ready(function(){
+			$('#suggestId').focus(function  () {
+				
+			})
+		});
+			
+			
+			
+		});
+	</script>
+	
+</body>
+			
+     </div>
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="js/mui.picker.js" ></script>
+		<script type="text/javascript" src="js/mui.poppicker.js" ></script>
+		<script type="text/javascript" src="js/city.data.js" ></script>
+	    <script type="text/javascript" src="js/city.data-3.js" ></script>
+		<script>
+//		       var labmdays1=$('#mday')[0];
+//			(function($) {
+//				$.init();
+//				var result = $('#result')[0];
+//				var btns = $('.btn');
+//				var labyears=$('#years')[0];
+//				
+//				var labhours=$('#hours')[0];
+//				btns.each(function(i, btn) {
+//					btn.addEventListener('tap', function() {
+//						var optionsJson = this.getAttribute('data-options') || '{}';
+//						var options = JSON.parse(optionsJson);
+//						var id = this.getAttribute('id');
+//						var picker = new $.DtPicker(options);
+//						picker.show(function(rs) {
+//							
+//							labmdays1.innerText=rs.m.text+"-"+rs.d.text;
+//							labhours.innerText=rs.h.text;
+//							picker.dispose();
+//						});
+//					}, false);
+//				});
+//				
+//			})(mui);
+//			
+//			
+//			var labmdays2=$('#mday1')[0];
+//			(function($) {
+//				$.init();
+//				var result = $('#result')[0];
+//				var btntow = $('.btn2');
+//				var labyears=$('#years1')[0];
+//				
+//				var labhours=$('#hours1')[0];
+//				btntow.each(function(i, btn) {
+//					btn.addEventListener('tap', function() {
+//						var optionsJson = this.getAttribute('data-options') || '{}';
+//						var options = JSON.parse(optionsJson);
+//						var id = this.getAttribute('id');
+//						var picker = new $.DtPicker(options);
+//						picker.show(function(rs) {
+//							
+//							labmdays2.innerText=rs.m.text+"-"+rs.d.text;
+//							labhours.innerText=rs.h.text;
+//							picker.dispose();
+//						});
+//					}, false);
+//				});
+//				
+//			})(mui);
+
+
+
+			(function($) {
+				$.init();
+				var result = $('#result')[0];
+				var btns = $('.btn');
+				var labmdays1=$('#mday')[0];
+				var labyears=$('#years')[0];
+				var labhours=$('#hours')[0];
+				
+				var btntow = $('.btn2');
+				var labmdays2=$('#mday1')[0];
+				var labhours2=$('#hours1')[0];
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							
+							labmdays1.innerText=rs.m.text+"-"+rs.d.text;
+							labhours.innerText=rs.h.text;
+							picker.dispose();
+							monsx=rs.m.value;
+                			daysx=rs.d.value;
+							 
+						});
+					}, false);
+				});
+				
+				 
+				btntow.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							
+							labmdays2.innerText=rs.m.text+"-"+rs.d.text;
+							labhours2.innerText=rs.h.text;
+							picker.dispose();
+							monsy=rs.m.value;
+				            daysy=rs.d.value;
+				            
+				            if (monsy<monsx) {
+				            labmdays1.innerHTML='';
+				            labhours.innerHTML='请选择正确日期';
+					        labmdays2.innerHTML='';
+					        labhours2.innerHTML='请选择正确日期';
+					        mui.alert('月份有误','警告');
+					
+				} else if(monsx==monsy){
+					if (daysy-daysx<2) {
+						labmdays2.innerHTML='';
+						labhours2.innerHTML='请选择正确的日期';
+						mui.alert('日期必须超过2天','警告');
+						
+					}
+					else{
+						labmdays2.innerText=rs.m.text+"-"+rs.d.text;
+						labhours2.innerText=rs.h.text;
+					}	
+				}else if (monsy>monsx) {
+					    labmdays2.innerText=rs.m.text+"-"+rs.d.text;
+						labhours2.innerText=rs.h.text;
+				}
+				            
+						});
+					}, false);
+				});
+					
+			})(mui);
+			
+			
+			
+			
+
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//三级联动
+					var userPicker = new $.PopPicker();
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton3 =  doc.getElementById('showCityPicker3');
+					var showCityPickerButton4 = doc.getElementById('showCityPicker4');
+					showCityPickerButton3.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton3.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+					showCityPickerButton4.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton4.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+				});
+				})(mui, document);  
+		</script>
+	</div>
+	
+</body>
+</html>

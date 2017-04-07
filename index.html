@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>车行天下AutoMobile</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>  
+    <script type="text/javascript">
+             mui.init()
+              $(document).ready(function  () {
+              	var offCanvasWrapper = mui('#offCanvasWrapper');
+              	var gallery = mui('.mui-slider');
+                gallery.slider({
+                interval:3500//自动轮播周期，若为0则不自动播放，默认为0；
+               });
+               mui('#mainContent').scroll();//主界面滑动
+                 
+                    mui('body').on('tap','a',function(){document.location.href=this.href;});
+                    document.getElementById('offCanvasHide').addEventListener('tap', function() {
+				offCanvasWrapper.offCanvas('close');
+			});
+              });
+              
+    </script>
+    <style type="text/css">
+    	#page_header_color{
+    		background-color:white;
+    	}
+    	#page_title_name{
+    		font-family: "楷体";
+    		color: white;
+    		font-size: 22px;
+    		font-weight: 300;
+    		
+    	}
+    	
+    	#page_gallery_width{   /*轮播图片的高度*/
+    		height:225px;
+    	}
+    	#scroll_li_a{
+    		list-style: none;
+    		
+    	}
+    	#scroll_li_a li a{
+    		color: white;
+    		font-size: 18px;
+    		font-weight: 200px;
+    		margin-top:30px ;
+    	}
+    	#span_margin{
+    		margin-left:10px ;
+    	}
+    	#li_top{
+    		margin-top:40px ;
+    	}
+    	header{
+    		/*background-image: url(img/bc4.jpg);*/ 
+    		background-size:400px;
+    		background-repeat: no-repeat;
+    	}
+    	#font_w{
+    		font-family: "新宋体";
+    		font-weight: 700;
+    		
+    	}
+    	#font_s{
+    		font-family:"新宋体" ;
+    		font-size: small;
+    		color: grey;
+    	}
+    	
+    </style>
+</head>
+<body >
+	<!-- 主界面菜单同时移动 -->
+    <!-- 侧滑导航根容器 -->
+    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+        <!-- 主页面容器 -->
+        
+            <!-- 菜单容器 -->
+            <aside id="offCanvasSide" class="mui-off-canvas-left" id="offCanvasSide">
+                <div class="mui-scroll-wrapper" style="background-image: url(img/BC0.jpg);height: auto;">
+                    <div class="mui-scroll" >
+                        <ul id="scroll_li_a">
+                        	<li id="li_top">
+                        		<a href="" class="mui-icon mui-icon-home" id="offCanvasHide"> 
+                        			  <span  id="span_margin">首页</span>
+                        		</a>
+                        		
+                        	</li>
+                        	<li>
+                        		<a href="help_center.html" class="mui-icon mui-icon-help"> 
+                        			  <span id="span_margin">帮助中心</span>
+                        		</a>
+                        		
+                        	</li>
+                        	<!--<li>
+                        		<a href="#" class="mui-icon mui-icon-chat"> 
+                        			  <span id="span_margin">用户反馈</span>
+                        		</a>
+                        		
+                        	</li>-->
+                        	<li>
+                        		<a href="#" class="mui-icon mui-icon-flag"> 
+                        			  <span id="span_margin">给我打分</span>
+                        		</a>
+                        		
+                        	</li>
+                        	<!--<li>
+                        		<a href="#" class="mui-icon mui-icon-info"> 
+                        			  <span id="span_margin">关于我们</span>
+                        		</a>
+                        		
+                        	</li>-->
+                        </ul>
+                        <!--版本图标区-->
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- 主页面标题 -->
+            <div class="mui-inner-wrap">
+            
+            <header class="mui-bar mui-bar-nav" id="page_header_color" >
+            	
+		    <a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-icon-left-nav mui-pull-left"></a>
+		    <h1 id="page_title_name" class="mui-title" style="color: darkgoldenrod;">车行天下</h1>
+		    <a href="discount.html" class="mui-icon mui-icon-spinner mui-spin mui-icon-right-nav mui-pull-right"></a>
+		</header>
+            <nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item" href="nearby.html">
+		        <span class="mui-icon mui-icon-location"></span>
+		        <span class="mui-tab-label">附近</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-phone"></span>
+		        <span class="mui-tab-label">电话</span>
+		    </a>
+		    <a class="mui-tab-item" href="Car/login.html">
+		        <span class="mui-icon mui-icon-person"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		    
+		</nav>
+            <!-- 主页面内容容器 -->
+            <div class="mui-content mui-scroll-wrapper" id="mainContent">
+                <div class="mui-scroll">
+                    <!-- 主界面具体展示内容 -->
+                    <!--动态轮播-->
+			<div class="mui-slider" id="page_gallery_width" id="page_slider_margin" style="border-radius: 0px 0px 0px 0px;">
+			    <div class="mui-slider-group mui-slider-loop">
+			        <div class="mui-slider-item mui-slider-item-duplicate">
+			            <a href="#">
+			                <img src="img/timg.jpg">
+			               
+			            </a>
+			        </div>
+			        <div class="mui-slider-item">
+			            <a href="#">
+			                <img src="img/timg2.jpg">
+			               
+			            </a>
+			        </div>
+			         <div class="mui-slider-item">
+			            <a href="#">
+			                <img src="img/timg3.jpg">
+			               
+			            </a>
+			        </div>
+			         <div class="mui-slider-item">
+			            <a href="#">
+			                <img src="img/timg.jpg">
+			               
+			            </a>
+			        </div>
+			         <div class="mui-slider-item mui-slider-item-duplicate">
+			            <a href="#">
+			                <img src="img/timg.jpg">
+			               
+			            </a>
+			        </div>
+			    </div>
+			    <div class="mui-slider-indicator" >
+			        <div class="mui-indicator mui-active"></div>
+			        <div class="mui-indicator"></div>
+			        <div class="mui-indicator"></div>
+			    </div>
+			</div>
+			
+                    <ul class="mui-table-view mui-grid-view">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-6" >
+			        <a href="Appointment_delivery.html" >
+			            <img style="width: 50px;" class="mui-media-object" src="img/car(1).png" style="width: 70px;">
+			            <div class="mui-media-body" style="height: 30px;">
+			            	
+			            	<span id="font_w">预约送取</span>
+			            	<br />
+			            	<span id="font_s">服务到家</span>
+			            	
+			            	
+			            	
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+			        <a href="take_it.html">
+			            <img style="width: 45px;" class="mui-media-object" src="img/huanche.png">
+			            <div class="mui-media-body" style="height: 30px;">
+			            	<span id="font_w">到店取还</span>
+			            	<br />
+			            	<span id="font_s">24小时待命</span>
+			            </div>
+			        </a>
+			    </li>
+			    
+			</ul>
+			<ul class="mui-table-view mui-grid-view" style="text-align: center; ">
+			     <li class="mui-table-view-cell mui-media mui-col-xs-6" >
+			        <a href="tejia_Package.html">
+			            <img style="width: 30px;" class="mui-media-object" src="img/tejiache.png" style="width: 70px;">
+			            <div class="mui-media-body" style="height: 30px;">
+			            	
+			            	<span id="font_w">特价套餐</span>
+			            	<br />
+			            	<span id="font_s">超值服务折起</span>
+			            	
+			            	
+			            	
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+			        <a href="shunfeng_car.html">
+			            <img style="width: 30px;" class="mui-media-object" src="img/feng.png">
+			            <div class="mui-media-body" style="height: 30px;">
+			            	<span id="font_w">顺风车</span>
+			            	<br />
+			            	<span id="font_s">一路顺风欢乐无忧</span>
+			            </div>
+			        </a>
+			    </li>
+			    
+			</ul>
+			<ul class="mui-table-view mui-grid-view" style="text-align: center; ">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-6" >
+			        <a href="map.html">
+			            <img style="width: 26px;" class="mui-media-object" src="img/99999.png" style="width: 70px;">
+			            <div class="mui-media-body" style="height: 30px;">
+			            	
+			            	<span id="font_w">查门店</span>
+			            	<br />
+			            	<span id="font_s">附近网点</span>
+			            	
+			            	
+			            	
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+			        <a href="daohang.html">
+			            <img style="width: 28px;" class="mui-media-object" src="img/daohang(1).png">
+			            <div class="mui-media-body" style="height: 30px;">
+			            	<span id="font_w">导航</span>
+			            	<br />
+			            	<span id="font_s">方便不迷路</span>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			    
+                </div>
+            </div>
+       	 <div class="mui-off-canvas-backdrop"></div>
+        </div>
+     
+        
+    </div>
+    
+</body>
+</html>

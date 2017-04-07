@@ -1,0 +1,217 @@
+{
+	"user.html": {
+		"href": "user.html",
+		"resources": [
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"img/gift.png",
+			"img/photo.png",
+			"img/red.png",
+			"img/common.png",
+			"img/star.png",
+			"img/share.png",
+			"img/feedback.png",
+			"img/credit.png",
+			"img/voucher.png",
+			"img/paid.png",
+			"img/invoice.png"
+		],
+		"refer": [],
+		"priority": 0
+	},
+	"reg.html": {
+		"href": "reg.html",
+		"resources": [
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"img/duihao.png"
+		],
+		"refer": [
+			"user.html"
+		],
+		"priority": 0
+	},
+	"index.html": {
+		"href": "index.html",
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"img/self driving.png",
+			"img/common.png",
+			"img/invoice.png",
+			"img/red.png",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"img/share.png",
+			"img/credit.png",
+			"img/free ride.png",
+			"img/photo.png",
+			"integral.html",
+			"value card.html",
+			"coupon.html",
+			"my trip.html",
+			"my invoice.html",
+			"address management.html",
+			"fenxiang.html",
+			"setting.html",
+			"img/free_ride.png",
+			"img/self_driving.png"
+		],
+		"refer": [
+			"reg.html",
+			"integral.html",
+			"value card.html",
+			"coupon.html",
+			"my trip.html",
+			"my invoice.html",
+			"address management.html",
+			"fenxiang.html",
+			"setting.html"
+		],
+		"priority": 0
+	},
+	"integral.html": {
+		"resources": [
+			"img/20 yuan.png",
+			"exchange.html",
+			"img/10 yuan.PNG",
+			"img/statement.png",
+			"exchange_2.html",
+			"index.html",
+			"integral rule.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"exchange.html",
+			"exchange_2.html",
+			"index.html",
+			"integral rule.html"
+		]
+	},
+	"exchange_2.html": {
+		"resources": [
+			"integral.html"
+		],
+		"refer": [
+			"integral.html"
+		]
+	},
+	"exchange.html": {
+		"resources": [
+			"integral.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/10 yuan.PNG"
+		],
+		"refer": [
+			"integral.html"
+		]
+	},
+	"coupon.html": {
+		"resources": [
+			"index.html",
+			"img/100 yuan.png"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"value card.html": {
+		"resources": [
+			"index.html"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"my trip.html": {
+		"resources": [
+			"img/zhongdian.png",
+			"img/qidian.png",
+			"index.html",
+			"img/qi_dian.png",
+			"img/zhong_dian.png"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"my invoice.html": {
+		"resources": [
+			"index.html",
+			"view invoice.html"
+		],
+		"refer": [
+			"index.html",
+			"view invoice.html"
+		]
+	},
+	"add address.html": {
+		"resources": [
+			"js/mui.picker.js",
+			"js/mui.poppicker.js",
+			"js/city.data.js",
+			"css/mui.poppicker.css",
+			"css/mui.picker.css",
+			"js/city.data-3.js",
+			"address management.html"
+		],
+		"refer": [
+			"address management.html"
+		]
+	},
+	"address management.html": {
+		"resources": [
+			"add address.html",
+			"index.html"
+		],
+		"refer": [
+			"add address.html",
+			"index.html"
+		]
+	},
+	"view invoice.html": {
+		"resources": [
+			"my invoice.html",
+			"img/invoice.jpg"
+		],
+		"refer": [
+			"my invoice.html"
+		]
+	},
+	"fenxiang.html": {
+		"resources": [
+			"img/gbRes_4.png",
+			"img/gbRes_1.png",
+			"img/gbRes_5.png",
+			"img/gbRes_3.png",
+			"css/style.css",
+			"img/gbRes_6.png",
+			"js/jquery.js",
+			"img/gbRes_2.png"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"css/feedback.css",
+			"img/Head portrait.png",
+			"js/feedback.js",
+			"js/mui.view.js",
+			"index.html"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"integral rule.html": {
+		"resources": [
+			"integral.html"
+		],
+		"refer": [
+			"integral.html"
+		]
+	}
+}

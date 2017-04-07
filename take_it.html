@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>到店取还</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+	<link href="css/mui.picker.css" rel="stylesheet" />
+	<link href="css/mui.poppicker.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="mui-bar mui-bar-nav" style="background: white;">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title" style="color:darkgoldenrod;">到店取还</h1>
+	</div>
+	
+	
+	<div class="mui-content" style="background:#fff;margin-top:50px;">
+	        <div class="mui-row">  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian1.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid limegreen; position: absolute;top: 28px; ">取车城市</p>
+		        </div>  
+		        <div class="mui-col-xs-7" >
+		        	<ul class="mui-table-view">
+					    <li class="mui-table-view-cell" >
+					    	<a id='showCityPicker3'>城市</a>
+					    </li>
+					</ul>					
+		        </div>  
+		        <div class="mui-col-xs-2" >
+		        	<div class="mui-switch mui-switch-mini" style="margin:4px auto;">
+					  <div class="mui-switch-handle"></div>
+					</div>
+		        </div>
+		    </div>  
+		    <div class="mui-row" >  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian2.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid yellow; position: absolute;top: 28px; ">取车门店</p>
+		        </div>  
+		        <div class="mui-col-xs-9" >
+		        	<div style="width:100%; height:43px; line-height:100%; text-align:center;">
+					    <select id="select1">
+					    <option value="1">一号店</option>
+					    <option value="2">二号店</option>
+					    <option value="3">三号店</option>
+					    <option value="4">四号店</option>
+					    </select>
+					</div>
+		        	<!--<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					        <a class="mui-navigate-right" style="color:#666;font-size: 12px;">选择门店</a>
+					    </li>
+					</ul>-->
+		        </div>  
+		    </div>
+		    
+		     <div class="mui-row" style="margin-top:10px;">  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian1.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid limegreen; position: absolute;top: 28px; ">还车城市</p>
+		        </div>  
+		        <div class="mui-col-xs-7" style="background: blue;">
+		        	<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					    	<a id='showCityPicker4'>城市</a>
+					    </li>
+					</ul>	
+		        </div>  
+		        <div class="mui-col-xs-2">
+		        	<div class="mui-switch mui-switch-mini" style="margin:4px auto;">
+					  <div class="mui-switch-handle"></div>
+					</div>
+		        </div>
+		    </div>  
+		    <div class="mui-row" >  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<img src="img/dian2.png" style="margin-left: -5px;position: absolute;top: 12px;" />
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid yellow; position: absolute;top: 28px; ">还车门店</p>
+		        </div>  
+		        
+		        
+		        <div class="mui-col-xs-9" >
+		        	<div style="width:100%; height:43px; line-height:100%; text-align:center;">
+					    <select id="select1">
+					    <option value="1">一号店</option>
+					    <option value="2">二号店</option>
+					    <option value="3">三号店</option>
+					    <option value="4">四号店</option>
+					    </select>
+					</div>
+		        	<!--<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					        <a class="mui-navigate-right" style="color:#666;font-size: 12px;">选择门店</a>
+					    </li>
+					</ul>-->
+		        </div>  
+		    </div>
+		    
+		    
+		    <ul class="mui-table-view" style="margin-top:10px;">
+			    <li class="mui-table-view-cell mui-media" id="pickDateBtn">
+			        <a>
+			            <img class="mui-media-object mui-pull-left" src="img/1(1).jpg">
+			            <div class="mui-media-body">
+			               <label>取车时间</label>
+			                <p class='mui-ellipsis' id="mytime1">请选择时间</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media" id="pickTimeBtn">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="img/2(2).jpg">
+			            <div class="mui-media-body">
+			              <label>还车时间</label>
+			                <p class='mui-ellipsis' id="mytime2">请选择时间</p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>		    
+		    
+		    <!--按钮-->
+	        <div style="margin-top:20px;">
+	        	<a href="list_test.html">
+	        	<button type="button" class="mui-btn mui-btn-warning" style="width:70%;margin-left:15%;padding:10px;">立即去选车</button>
+	        	</a>
+	        </div>
+	        <div  style="margin-top:10px;">
+	        	<p style="text-align: center; color: lightgray;">部分城市指定区域 免费上门送取车</p>
+	        </div>
+	        
+	        <nav class="mui-bar mui-bar-tab">
+	            <a class="mui-tab-item mui-active">
+	                <span class="mui-icon mui-icon-home"></span>
+	                <span class="mui-tab-label">到店取还</span>
+	            </a>
+	           
+	        </nav>
+
+	</div>
+	
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.picker.js"></script>
+	<script src="js/mui.poppicker.js"></script>
+	<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+      	(function($, doc) {
+				$.init();
+				$.ready(function() {
+					
+					
+				
+                 
+					
+					
+				
+					
+					//三级联动
+					var userPicker = new $.PopPicker();
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton3 = doc.getElementById('showCityPicker3');
+					var showCityPickerButton4 = doc.getElementById('showCityPicker4');
+					showCityPickerButton3.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton3.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+					showCityPickerButton4.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton4.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+				});
+				
+				//时间选择器
+				var mytime1=document.getElementById('mytime1');
+				var mytime2=document.getElementById('mytime2');
+				
+				document.getElementById("pickDateBtn").addEventListener('tap', function() {
+			    var dDate = new Date();
+			    //设置当前日期（不设置默认当前日期）
+			    dDate.setFullYear(2016, 7, 16);
+			    var minDate = new Date();
+			    //最小时间
+			    minDate.setFullYear(2010, 0, 1);
+			    var maxDate = new Date();
+			    //最大时间
+			    maxDate.setFullYear(2017, 11, 31);
+			    plus.nativeUI.pickDate(function(e) {
+			        var d = e.date;
+			        mui.toast('您选择的日期是:' + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+			        
+			        monx=d.getMonth() + 1;
+			        dayx=d.getDate();
+			       
+			        mytime1.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+			    }, function(e) {
+			        mui.toast("您没有选择日期");
+			    }, {
+			        title: '请选择日期',
+			        date: dDate,
+			        minDate: minDate,
+			        maxDate: maxDate
+			    });
+			});
+			document.getElementById("pickTimeBtn").addEventListener('tap', function() {
+			    var dDate = new Date();
+			    //设置当前日期（不设置默认当前日期）
+			    dDate.setFullYear(2016, 7, 16);
+			    var minDate = new Date();
+			    //最小时间
+			    minDate.setFullYear(2010, 0, 1);
+			    var maxDate = new Date();
+			    //最大时间
+			    maxDate.setFullYear(2017, 11, 31);
+			    plus.nativeUI.pickDate(function(e) {
+			        var d = e.date;
+			        mui.toast('您选择的日期是:' + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+			        
+			        mony=d.getMonth() + 1;
+			        dayy=d.getDate();
+			        
+ 			        
+			        
+			        if(mony<monx){
+			        	mytime2.innerHTML='';
+			        	mui.alert('月份有误', '警告');	
+			        }else if(mony==monx){
+			        	if(dayy-dayx<2){	
+			        		mytime2.innerHTML='';
+				        	mui.alert('日期必须超过2天', '警告');	
+				        }else{
+				        	mytime2.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+				        }
+			        }else if(mony>monx){
+			        	mytime2.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+			        }
+			       
+			        
+			        
+			    }, function(e) {
+			        mui.toast("您没有选择日期");
+			    }, {
+			        title: '请选择日期',
+			        date: dDate,
+			        minDate: minDate,
+			        maxDate: maxDate
+			    });
+			});	
+				
+				
+			})(mui, document);  	
+    </script>
+</body>
+</html>

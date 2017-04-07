@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>验证信用卡第2步</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-bar mui-bar-nav" style="background: white;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title" style="color:black">验证信用卡</h1>
+		    <a class="mui-icon mui-icon-help mui-pull-right"></a>
+		</div>
+		<div class="mui-content">
+		    <div style="margin-top:50px;" id='showUserPicker'>
+		    	<form class="mui-input-group">
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">开户银行</label>
+				        <input id="myinput" type="text" class="mui-input-clear" value="请选择银行" readonly="readonly" style="color:#666;">
+				    </div>
+				</form>
+		    </div>
+		    
+		    <div style="margin-top:10px;">
+		    	<form class="mui-input-group">
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">信用卡号</label>
+				        <input type="text" class="mui-input-clear" placeholder="请输入卡号">
+				    </div>
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">安全码</label>
+				        <input type="text" class="mui-input-clear" placeholder="卡背面3位">
+				        <a class="mui-icon mui-icon-help mui-pull-right"></a>
+				    </div>
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">有效期</label>
+				        <input id='pickDateBtn' type="text" class="mui-input-clear" value="请选择有效期" readonly="readonly" style="color:#666;">
+				    </div>
+				</form>
+		    </div>
+		    
+		    
+		    <div style="margin-top:10px;">
+		    	<form class="mui-input-group">
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">持卡人</label>
+				        <input  type="text" class="mui-input-text" value="郭培思" readonly="readonly">
+				    </div>
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">证件类型</label>
+				        <input type="text" class="mui-input-text" value="身份证/驾驶证" readonly="readonly">
+				        <a class="mui-icon mui-icon-help mui-pull-right"></a>
+				    </div>
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">证件号码</label>
+				        <input type="text" class="mui-input-text" value="123123123123" readonly="readonly">
+				    </div>
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">手机号</label>
+				        <input type="text" class="mui-input-text" placeholder="请输入银行预留手机号">
+				    </div>
+				    <div class="mui-input-row">
+				        <label style="border-right:1px solid #ccc;">验证码</label>
+				        <input type="text" class="mui-input-text" placeholder="请输入验证码">
+				    </div>
+				    
+				</form>
+		    </div>
+		    <div style="margin-top:30px;">
+				<button type="button" class="mui-btn mui-btn-warning" style="height:40px;width:80%;margin-left:10%;">确定</button>
+			</div>
+		    
+		</div>
+		
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'a',
+						text: '中国工商银行'
+					}, {
+						value: 'b',
+						text: '中国农业银行'
+					}, {
+						value: 'c',
+						text: '中国银行'
+					}, {
+						value: 'd',
+						text: '中国建设银行'
+					},{
+						value: 'e',
+						text: '交通银行'
+					},{
+						value: 'f',
+						text: '中国邮政储蓄银行'
+					},{
+						value: 'g',
+						text: '中信银行'
+					},{
+						value: 'h',
+						text: '中国光大银行'
+					},{
+						value: 'i',
+						text: '华夏银行'
+					},{
+						value: 'j',
+						text: '中国民生银行'
+					},{
+						value: 'k',
+						text: '广东发展银行'
+					},{
+						value: 'l',
+						text: '招商银行'
+					},{
+						value: 'm',
+						text: '兴业银行'
+					},{
+						value: 'n',
+						text: '平安银行'
+					},{
+						value: 'p',
+						text: '北京银行'
+					},{
+						value: 'q',
+						text: '上海浦东发展银行'
+					},{
+						value: 'r',
+						text: '上海银行'
+					},{
+						value: 's',
+						text: '包商银行'
+					},{
+						value: 't',
+						text: '兰州银行'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('userResult');
+					var myinput = doc.getElementById('myinput');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							myinput.value = JSON.stringify(items[0].text);
+						});
+					}, false);
+				});
+			})(mui, document);
+			
+			var pickDateBtnx=document.getElementById("pickDateBtn");
+			pickDateBtnx.addEventListener('tap', function() {
+		    var dDate = new Date();
+		    //设置当前日期（不设置默认当前日期）
+		    dDate.setFullYear(2016, 7, 16);
+		    var minDate = new Date();
+		    //最小时间
+		    minDate.setFullYear(2010, 0, 1);
+		    var maxDate = new Date();
+		    //最大时间
+		    maxDate.setFullYear(2016, 11, 31);
+		    plus.nativeUI.pickDate(function(e) {
+		        var d = e.date;
+		        mui.toast('您选择的日期是:' + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+		        pickDateBtnx.value=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+		    }, function(e) {
+		        mui.toast("您没有选择日期");
+		    }, {
+		        title: '请选择日期',
+		        date: dDate,
+		        minDate: minDate,
+		        maxDate: maxDate
+		    });
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		});
+		</script>
+	</body>
+
+</html>

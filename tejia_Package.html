@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>特价套餐</title>
+  
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/mui.poppicker.css"/>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" charset="UTF-8">mui.init();</script>
+    <style type="text/css">.mui-bar {
+	/*background-image: url(img/bc4.jpg);*/
+	background-size: 500px;
+	background-repeat: no-repeat;
+}
+
+#item1mobile {
+	/*background-color: lightgray;*/
+	min-height: 310px;
+}
+#item2mobile {
+	/*background-color: lightgray;*/
+	min-height: 385px;
+}
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+
+#demo7 {
+	width: 37%;
+	margin-left: 10px;
+}
+
+#demo71 {
+	width: 37%;
+	margin-right: 10px;
+}</style>
+</head>
+<body>
+	<div class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title" style="color: darkgoldenrod;">特价套餐</h1>
+	    <!--<a href="#" class=" mui-icon mui-icon-paperclip mui-icon-right-nav mui-pull-right"></a>-->
+	    <a href="youhui_huodong.html" class="mui-icon mui-icon-info mui-icon-right-nav mui-pull-right"></a>
+	   
+	</div>
+	<div class="mui-content" style="margin-top: 60px;">
+	    <div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1mobile">
+				短期租车
+			</a>
+					<a class="mui-control-item" href="#item2mobile">
+				长期租车
+			</a>
+				
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-row">  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<!--<img src="img/dian1.png" style="margin-left: -5px;position: absolute;top: 12px;" />-->
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid limegreen; position: absolute;top: 28px; ">取车城市</p>
+		        </div>  
+		        <div class="mui-col-xs-7" >
+		        	<ul class="mui-table-view">
+					    <li class="mui-table-view-cell" >
+					    	<a id='showCityPicker5'>城市</a>
+					    </li>
+					</ul>					
+		        </div>  
+		        <div class="mui-col-xs-2" >
+		        	<div class="mui-switch mui-switch-mini" style="margin:4px auto;">
+					  <div class="mui-switch-handle"></div>
+					</div>
+		        </div>
+		    </div>  
+		    <div class="mui-row" style="margin-top: 1px;" >  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<!--<img src="img/dian2.png" style="margin-left: -5px;position: absolute;top: 12px;" />-->
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid yellow; position: absolute;top: 28px; ">取车门店</p>
+		        </div>  
+		        <div class="mui-col-xs-9" >
+		        	<div style="width:100%; height:43px; line-height:100%; text-align:center;">
+					    <select id="select1">
+					    <option value="1">一号店</option>
+					    <option value="2">二号店</option>
+					    <option value="3">三号店</option>
+					    <option value="4">四号店</option>
+					    </select>
+					</div>
+		        	<!--<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					        <a class="mui-navigate-right" style="color:#666;font-size: 12px;">选择门店</a>
+					    </li>
+					</ul>-->
+		        </div>  
+		    </div>
+		    
+		     <div class="mui-row" style="margin-top:2px;">  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<!--<img src="img/dian1.png" style="margin-left: -5px;position: absolute;top: 12px;" />-->
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid limegreen; position: absolute;top: 28px; ">还车城市</p>
+		        </div>  
+		        <div class="mui-col-xs-7" style="background: blue;">
+		        	<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					    	<a id='showCityPicker4'>城市</a>
+					    </li>
+					</ul>	
+		        </div>  
+		        <div class="mui-col-xs-2">
+		        	<div class="mui-switch mui-switch-mini" style="margin:4px auto;">
+					  <div class="mui-switch-handle"></div>
+					</div>
+		        </div>
+		    </div>  
+		    <div class="mui-row" style="margin-top: 1px;">  
+		        <div class="mui-col-xs-3" style="padding:5px;">
+		        	<!--<img src="img/dian2.png" style="margin-left: -5px;position: absolute;top: 12px;" />-->
+		        	<p style="color:#000;margin-left:14px; margin-top: -18px;  border-right:1px solid yellow; position: absolute;top: 28px; ">还车门店</p>
+		        </div>  
+		        <div class="mui-col-xs-9" >
+		        	<div style="width:100%; height:43px; line-height:100%; text-align:center;">
+					    <select id="select1">
+					    <option value="1">一号店</option>
+					    <option value="2">二号店</option>
+					    <option value="3">三号店</option>
+					    <option value="4">四号店</option>
+					    </select>
+					</div>
+		        	<!--<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">
+					        <a class="mui-navigate-right" style="color:#666;font-size: 12px;">选择门店</a>
+					    </li>
+					</ul>-->
+		        </div>  
+		    </div>
+       
+      <div class="shadow">
+      	
+      
+      	<hr />
+      <!--data  time-->
+      <button id='demo7' data-options='{"type":"hour","customData":{"h":[{"text":"上午(9:00-12:00)","value":"上午(9:00-12:00)"},{"text":"下午(14:00-18:00)","value":"下午(14:00-18:00)"},{"text":"晚上(19:00-22:00)","value":"晚上(19:00-22:00)"}]},"labels":["年", "月", "日", "时段", "分"]}' 
+					class="btn mui-btn mui-btn-warning mui-btn-outlined">					
+					<label id="mytime1">
+						请选择日期
+						
+					</label>
+					<br />
+					<label id="hours"></label>
+					<br />					
+				</button>
+				<button id='demo71' data-options='{"type":"hour","customData":{"h":[{"text":"上午(9:00-12:00)","value":"上午(9:00-12:00)"},{"text":"下午(14:00-18:00)","value":"下午(14:00-18:00)"},{"text":"晚上(19:00-22:00)","value":"晚上(19:00-22:00)"}]},"labels":["年", "月", "日", "时段", "分"]}' 
+					class="btn2 mui-btn mui-btn-warning mui-pull-right mui-btn-outlined">
+					
+					<label id="mytime2">请选择日期</label>
+					<br />
+					<label id="hours1"></label>
+					<br />
+				</button>
+				<hr />
+				<div style="text-align: center;">
+				
+				<a href="list_test.html" class="mui-btn mui-btn-yellow" style="width: 80%;margin-top: 5px; ">去选车</a>
+				</div>
+				</div>
+				</div>
+						</div>
+					</div>
+					<!--长期租车-->
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+			
+			 <form class="mui-input-group" style="margin-top: 5px;">
+			    <div class="mui-row">
+			        <div class="mui-col-sm-4 mui-col-xs-4" style="height: 33px; text-align: center; margin-top: 15px;">
+           <span>租期</span>
+        </div>
+        <div class="mui-col-sm-8 mui-col-xs-8" style="text-align: center; margin-top: 15px;">
+           <span>
+                  360-366天
+            </span>
+           </div>
+           </div>
+           <hr  style="opacity: 0.3;"/>
+			</form>
+			 
+			 <form class="mui-input-group">
+			    <div class="mui-row">
+			        <div class="mui-col-sm-4 mui-col-xs-4" style="height: 33px; text-align: center; margin-top: 25px;">
+           <span>取车城市</span>
+        </div>
+        <div class="mui-col-sm-8 mui-col-xs-8" style="text-align: center; margin-top: 25px;">
+           <a class="mui-navigate-right">
+           	<div id="showCityPicker3">
+           		请选择城市
+           	</div>
+                      
+            </a>
+           </div>
+           </div>
+           <hr  style="opacity: 0.3;"/>
+           <div class="mui-row">
+			        <div class="mui-col-sm-4 mui-col-xs-4" style="height: 33px; text-align: center; margin-top: 7px;margin-bottom: 8px;">
+           <span>取车日期</span>
+        </div>
+        <div class="mui-col-sm-8 mui-col-xs-8" style="text-align: center; margin-top: 7px;">
+           <a class="mui-navigate-right" id="demo72">
+           	<div  id="mytime3">
+           		 请选择日期  
+           	</div>
+                   
+            </a>
+           </div>
+           </div>
+			</form>
+			
+			<form class="mui-input-group">
+			    <div class="mui-row">
+			        <div class="mui-col-sm-4 mui-col-xs-4" style="height: 33px; text-align: center; margin-top: 15px;">
+           <span>品牌</span>
+        </div>
+        <div class="mui-col-sm-8 mui-col-xs-8" style="text-align: center; margin-top: 15px;">
+           <a class="mui-navigate-right">
+           	<div id="showUserPicker">
+           		请选择品牌
+           	</div>
+                    
+            </a>
+           </div>
+           </div>
+           <hr  style="opacity: 0.3;"/>
+           <div class="mui-row">
+           	
+			        <div class="mui-col-sm-4 mui-col-xs-4" style="height: 33px; text-align: center; margin-top: 7px; margin-bottom: 8px;">
+           <span>车型</span>
+        </div>
+        <div class="mui-col-sm-8 mui-col-xs-8" style="text-align: center; margin-top: 7px;">
+           <a class="mui-navigate-right">
+           	<div id="showUserPicker2">
+           		请选择车型  
+           	</div>
+                    
+            </a>
+           </div>
+           </div>
+			</form>
+			
+			<!--<form class="mui-input-group">
+			    <div class="mui-row">
+			        <div class="mui-col-sm-4 mui-col-xs-4" style="height: 33px; text-align: center; margin-top: 15px;">
+           <span>车辆</span>
+        </div>-->
+        <!--<div class="mui-col-sm-8 mui-col-xs-8" style="text-align: center; margin-top: 7px;">
+          
+				<div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='9'>
+  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+  <input class="mui-numbox-input" type="number" />
+  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+</div>
+           	
+           </div>-->
+          <!-- </div>-->
+           <hr  style="opacity: 0.3;"/>
+          
+			</form>
+			
+			 <a href="#" type="button" class="mui-btn mui-btn-primary mui-btn-block">确认</a>	
+			</div>
+			
+			</div>
+			
+        </div>
+					
+			</div>
+			
+			</div>
+    
+	</div>
+	
+	    <script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/mui.picker.min.js" ></script>
+		<!--<script type="text/javascript" src="js/mui.picker.js" ></script>-->
+		<script type="text/javascript" src="js/mui.poppicker.js" ></script>
+		<script type="text/javascript" src="js/city.data.js" ></script>
+	    <script type="text/javascript" src="js/city.data-3.js" ></script>
+		<script>
+		
+		
+		//滑动页面2
+			mui.init({
+				swipeBack: false
+			});
+			(function($) {
+				$('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});			
+				var item2 = document.getElementById('item2mobile');
+				
+				document.getElementById('slider').addEventListener('slide', function(e) {
+					if (e.detail.slideNumber === 1) {
+						if (item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('.mui-scroll').innerHTML = html2;
+							}, 500);
+						}
+					} 
+					
+				});
+				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
+						//force repaint
+						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
+					}
+				});
+			})(mui);
+			
+			//numberBox
+//			var testBox=document.getElementById("test");
+//			testBox.addEventListener('change',function(){
+//				console.log(testBox.value);
+//			});
+
+            //品牌
+           (function($, doc) {
+				$.init();
+				$.ready(function() {
+					//普通示例
+					var userPicker = new $.PopPicker();					
+					userPicker.setData([{
+					    
+						text: '宝马'
+						
+					}, {
+						
+						text: '奥迪'
+					}, {
+						
+						text: '奔驰'
+					}, {
+						
+						text: '大众'
+					}, {
+						
+						text: '别克'
+					}, {
+						
+						text: '本田'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+//					var userResult = doc.getElementById('userResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							showUserPicker.innerText =items[0].text;
+                         
+						});
+					}, false);
+					var userPicker2 = new $.PopPicker();					
+					userPicker2.setData([{
+					    
+						text: '大型'
+						
+					}, {
+						
+						text: '中型'
+					}, {
+						
+						text: '小型'
+					}]);
+					var showUserPickerButton2 = doc.getElementById('showUserPicker2');
+//					var userResult = doc.getElementById('userResult');
+					showUserPickerButton2.addEventListener('tap', function(event) {
+						userPicker2.show(function(items) {
+							showUserPicker2.innerText =items[0].text;
+                         
+						});
+					}, false);
+					})
+					})(mui, document);
+			//data time
+			//时间选择器
+				var mytime1=document.getElementById('mytime1');
+				var mytime2=document.getElementById('mytime2');
+				var mytime3=document.getElementById('mytime3');
+				document.getElementById("demo7").addEventListener('tap', function() {
+			    var dDate = new Date();
+			    //设置当前日期（不设置默认当前日期）
+			    dDate.setFullYear(2016, 7, 16);
+			    var minDate = new Date();
+			    //最小时间
+			    minDate.setFullYear(2010, 0, 1);
+			    var maxDate = new Date();
+			    //最大时间
+			    maxDate.setFullYear(2016, 11, 31);
+			    plus.nativeUI.pickDate(function(e) {
+			        var d = e.date;
+			        mui.toast('您选择的日期是:' + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+			        
+			          monx=d.getMonth() + 1;
+			          dayx=d.getDate();
+			        mytime1.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+			    },  {
+			        title: '请选择日期',
+			        date: dDate,
+			        minDate: minDate,
+			        maxDate: maxDate
+			    });
+			});
+			document.getElementById('demo71').addEventListener('tap', function() {
+			    var dDate = new Date();
+			    //设置当前日期（不设置默认当前日期）
+			    dDate.setFullYear(2016, 7, 16);
+			    var minDate = new Date();
+			    //最小时间
+			    minDate.setFullYear(2010, 0, 1);
+			    var maxDate = new Date();
+			    //最大时间
+			    maxDate.setFullYear(2016, 11, 31);
+			    plus.nativeUI.pickDate(function(e) {
+			        var d = e.date;
+			        mui.toast('您选择的日期是:' + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+			        mytime2.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+			        mony=d.getMonth() + 1;
+			        dayy=d.getDate();
+			        
+ 			        
+			        
+			        if(mony<monx){
+			        	mytime2.innerHTML='请选择正确的日期';
+			        	mui.alert('月份有误', '警告');	
+			        }else if(mony==monx){
+			        	if(dayy-dayx<2){	
+			        		mytime2.innerHTML='请选择正确日期';
+				        	mui.alert('日期必须超过2天', '警告');	
+				        }else{
+				        	mytime2.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+				        }
+			        }else if(mony>monx){
+			        	mytime2.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+			        }
+			        
+			        
+			    },{
+			        title: '请选择日期',
+			        date: dDate,
+			        minDate: minDate,
+			        maxDate: maxDate
+			    });
+			});
+			
+			document.getElementById('demo72').addEventListener('tap', function() {
+			    var dDate = new Date();
+			    //设置当前日期（不设置默认当前日期）
+			    dDate.setFullYear(2016, 7, 16);
+			    var minDate = new Date();
+			    //最小时间
+			    minDate.setFullYear(2010, 0, 1);
+			    var maxDate = new Date();
+			    //最大时间
+			    maxDate.setFullYear(2016, 11, 31);
+			    plus.nativeUI.pickDate(function(e) {
+			        var d = e.date;
+			        mui.toast('您选择的日期是:' + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+			        mytime3.innerHTML=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+			         
+			    },{
+			        title: '请选择日期',
+			        date: dDate,
+			        minDate: minDate,
+			        maxDate: maxDate
+			        
+			        
+			    });
+			});
+			
+			//三级联动
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//三级联动
+					var userPicker = new $.PopPicker();
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton3 =  doc.getElementById('showCityPicker3');
+					
+					var showCityPickerButton4 = doc.getElementById('showCityPicker4');
+					
+					var showCityPickerButton5 =  doc.getElementById('showCityPicker5');
+										
+					showCityPickerButton3.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton3.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+					
+					showCityPickerButton4.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton4.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+					
+					showCityPickerButton5.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton5.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+					
+				});
+				})(mui, document);
+//			mui('.mui-numbox').numbox();
+
+		</script>
+</body>
+</html>
